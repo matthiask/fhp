@@ -138,6 +138,7 @@ h4 { font-size: 270%; }
 
 strong { font-weight: bold; }
 em { font-style: italic; }
+a { color: #62afd4; font-weight: 900; font-family: Lato, sans-serif; text-decoration: none; }
 
 p { font-size: 120%; }
 ul, p { font-family: Georgia, serif; }
