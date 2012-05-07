@@ -73,9 +73,10 @@ section {
     background-position: 50% 50%; background-repeat: no-repeat;
     background-size: 100%;
     opacity: 0;
+    z-index: 0;
 }
 
-section.current { opacity: 1; }
+section.current { opacity: 1; z-index: 1; }
 
 /* slides with lots of content (horizontally or vertically */
 section.big { padding-top: 8%; padding-bottom: 5%; }
