@@ -23,8 +23,8 @@ __ = {
 
 
 window.addEventListener('load', function() {
-    var slides = __.list('section'),
-        current = 0;
+    var slides = __.list('section')
+        , current = 0;
 
     function mark() {
         if (current < 0) current = 0;
@@ -75,8 +75,8 @@ window.addEventListener('load', function() {
         element.classList.add('n' + idx);
     });
     __.list('section.image').forEach(function(element) {
-        var img = __.get('img', element),
-            css = {
+        var img = __.get('img', element)
+            , css = {
                 'backgroundImage': 'url(' + img.getAttribute('src') + ')'
                 };
 
