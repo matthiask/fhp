@@ -30,35 +30,42 @@ window.addEventListener('load', function() {
         if (current < 0) current = 0;
         if (current >= slides.length) current = slides.length - 1;
 
-        window.location.hash = 'slide' + current;
-
         __.list('section.current').forEach(function(element) {
             element.classList.remove('current');
         });
         slides[current].classList.add('current');
     }
 
+    function parsehash() {
+        if (window.location.hash) {
+            current = parseInt(window.location.hash.substr(6));
+            if (isNaN(current)) current = 0;
+        }
+    }
+
     document.body.addEventListener('keydown', function(event) {
         switch(event.keyCode) {
             case 39:
             case 32:
-                ++current;
-                mark();
+                current = Math.min(slides.length - 1, ++current);
+                window.location.hash = 'slide' + current;
                 return false;
             case 37:
-                --current;
-                mark();
+                current = Math.max(0, --current);
+                window.location.hash = 'slide' + current;
                 return false;
         }
         console.log(event);
     });
 
     // initialization
-    if (window.location.hash) {
-        current = parseInt(window.location.hash.substr(6));
-        if (isNaN(current)) current = 0;
-    }
+    parsehash();
     mark();
+
+    window.addEventListener('hashchange', function() {
+        parsehash();
+        mark();
+    });
 
     __.list('li').forEach(function(element) {
         element.innerHTML = '<span class="marker"></span>' + element.innerHTML;
