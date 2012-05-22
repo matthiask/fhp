@@ -68,10 +68,10 @@ window.addEventListener('load', function() {
     });
 
     __.list('li').forEach(function(element) {
-        element.innerHTML = '<span class="marker"></span>' + element.innerHTML;
+        element.insertBefore(document.createElement('span')).classList.add('marker');
     });
     __.list('section.title').forEach(function(element, idx) {
-        element.innerHTML = '<span class="marker"></span>' + element.innerHTML;
+        element.insertBefore(document.createElement('span')).classList.add('marker');
         element.classList.add('n' + idx);
     });
     __.list('section.image').forEach(function(element) {
