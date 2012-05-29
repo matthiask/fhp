@@ -166,3 +166,6 @@ ol li:nth-child(7) .marker { background-image: url(7-grau.png); }
 li li { font-size: 80%; }
 li li .marker, ol li li .marker { background-image: url(plus.png); }
 li ul, li ol { margin-bottom: .2em; }
+
+pre, code { font-family: "Courier New", monospace, sans-serif; }
+li code { font-size: .7em; }
