@@ -8,7 +8,7 @@
   font-family: 'Lato';
   font-style: normal;
   font-weight: 900;
-  src: local('Lato Black'), local('Lato-Black'), url('fhp/Lato-Black.ttf') format('TrueType');
+  src: local('Lato Black'), local('Lato-Black'), url('Lato-Black.ttf') format('TrueType');
 }
 @font-face {
   font-family: 'Lato';
