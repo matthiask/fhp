@@ -124,11 +124,12 @@ h1, h2, h3, h4, h5, h6 {
 .intro h1, .title h1 { opacity: 1; }
 .intro p { margin-top: 2.5em; }
 
-blockquote {
+blockquote, q {
     font-weight: 700; font-style: italic; font-size: 270%;
     margin: 0 0 .3em 0; }
-blockquote:before { content: '«'; }
-blockquote:after { content: '»';}
+q { font-size: 100%; }
+blockquote:before, q:before { content: '«'; }
+blockquote:after, q:after { content: '»';}
 
 
 h1 { font-size: 420%; }
