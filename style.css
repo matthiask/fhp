@@ -116,6 +116,8 @@ section.image.dark h1 { background: #333; color: #fff; }
 /* move the title bar to the bottom */
 section.image.bottom h1 { top: 70%; }
 
+/* centered item */
+section.centered > * { display: block; margin: 0 auto; }
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 900; /* black */ opacity: 0.6; }
